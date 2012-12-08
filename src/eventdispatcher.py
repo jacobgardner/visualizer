@@ -8,6 +8,7 @@ EVENTS = [
     'on_run_gamelog',
     ]
 
+
 def event_handler(func):
     '''
     Registered the function as an event handler
@@ -47,7 +48,7 @@ class EventDispatcher(pyglet.event.EventDispatcher):
 
     def on_run_gamelog(self, gamelog_data):
         '''
-        This event is triggered when a gamelog has finished being decompressed and is ready to be played.  
+        This event is triggered when a gamelog has finished being decompressed and is ready to be played.
 
         :param gamelog_data: Is a JSON string of the gamelog.  This gamelog must have a 'gameName' attribute that specifies which plugin to load.
         :type gamelog_data: string
@@ -59,5 +60,5 @@ class EventDispatcher(pyglet.event.EventDispatcher):
 
         :param gamelog: The gamelog file (compressed or decompressed)
         :type gamelog: string to gamelog to be loaded and ran
-        ''' 
+        '''
 

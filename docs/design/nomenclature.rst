@@ -20,8 +20,8 @@ Gameplay Modes
     Liquid-Mode
         This mode is a theoretical mode that is a mixture of Unit-Mode and Normal-Mode.  Object movement is lagged to some extent based on when commands occurred, but there is still a fair amount of simultaneous moves occurring.  This mode may be useful for quick debugging by inspection, but still showing the overall flow of the game.
 
-Misc
-----
+Timeline Nomenclature
+---------------------
 
 .. glossary::
 
@@ -33,3 +33,6 @@ Misc
 
     Tag
         An element of the timeline which specifies a "special" point on timeline.  A tag can be a turn number, break point, bookmark, etc.  
+
+    Blocking
+        An animation is considered 'blocking' on the timeline if, in unit-mode, by default, it will occur indepedent of all other animations.  An example of a non-blocking animation might be a unit spawn where the server may spawn N ships at once at the beginning of a turn.  There is no implied order to these animations (unless there is).
